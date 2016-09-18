@@ -1,0 +1,37 @@
+# Roll_a_Ball
+The Unity3D initial tutorial done in Arcadia.
+
+# Background
+
+Unity3D is a game engine with a freely downloadable editor and IDE. The first tutorial is here https://unity3d.com/learn/tutorials/projects/roll-ball-tutorial and is 
+a game where you roll a ball around an environment and pickup squares.
+
+Arcadia is an extension to Unity3D that allows you to write your game in Clojure on the CLR.
+
+This repo is the Roll a Ball tutorial in Unity written in Arcadia, with as much a one to one mapping so you can follow it along.
+
+# How to get running
+
+1. Download and install Unity -> https://store.unity.com/
+2. Clone this repo -> `git clone https://github.com/mlakewood/Roll_a_Ball Roll_a_Ball`
+3. Install Arcadia -> `$ cd Roll_a_Ball; ./install_arcadia.sh`
+4. Start Arcadia and open the Roll_a_Ball project.
+5. Once Arcadia has started connect the Arcadia Repl.
+6. Create an empty Game Object called "StartObject" by 
+	1. Going to GameObject -> Create Empty
+	2. In the inspector rename the object to "StartObject"
+7. Enter into Play mode by pressing the Play button.
+8. Import the `rollball.core` namespace and evaluate.
+9. Run the following code:
+```
+rollball.core=> (require '[arcadia.core :refer [hook+]])
+nil
+rollball.core=> (def start-object (first (objects-named "StartObject")))
+#'rollball.core/start-object
+rollball.core=> (hook+ start-object :start #'start)
+#unity/Object 9812
+rollball.core=> 
+```
+10. Press the Play button in Unity and you should get the playfield up and be able to move the ball around with the arrows.
+
+
