@@ -2,4 +2,4 @@
 
 rm -rf Assets/Arcadia
 git clone https://github.com/arcadia-unity/Arcadia.git Assets/Arcadia
-cd Assets/Arcadia; git checkout develop; git checkout 97cfa49
+cd Assets/Arcadia; git checkout develop
