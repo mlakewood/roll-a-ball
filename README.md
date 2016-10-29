@@ -18,7 +18,7 @@ This repo is the Roll a Ball tutorial in Unity written in Arcadia, with as much 
 4. Start Unity3D and open the roll-a-ball project.
 5. Navigate to the project view and open the `Roll a Ball` scene. You should see a number of game objects including a StartObject
 6. Once Arcadia has started connect the Arcadia Repl.
-7. Import the `rollball.core` namespace and evaluate.
+7. Import the `rollball.core` namespace and evaluate: `(in-ns 'rollball.core)`
 8. Run the following code:
 ```
 rollball.core=> (require '[arcadia.core :refer [hook+]])
